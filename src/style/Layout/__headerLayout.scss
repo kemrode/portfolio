@@ -1,0 +1,10 @@
+@import '../Utils/mixin.scss';
+@import '../Utils/variables.scss';
+
+@import '../Layout/_column.scss';
+@import '../Layout/_rowLayout.scss';
+
+.hundred {
+    width: 100%;
+    height: 100px;
+}

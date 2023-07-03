@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import { createBrowserRouter } from 'react-router-dom';
 import './App.css';
+import HomeController from './controlers/HomeController';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div></div>
   );
+  // <Router>
+  //   <div className='app'>
+  //     <Routes>
+  //       <Route exact path='/' Component={HomeController} />
+  //       <Route
+  //         path="*"
+  //         element={
+  //           <div>
+  //             <h2>404 Page not found, hé ouais gros !</h2>
+  //           </div>
+  //         }
+  //       />
+  //     </Routes>
+  //   </div>
+  // </Router>
+  // );
 }
 
 export default App;

@@ -1,0 +1,7 @@
+@import '../Utils/mixin.scss';
+
+.col {
+    @include flexColumn();
+    justify-content: flex-start;
+    align-items: flex-start;
+}
