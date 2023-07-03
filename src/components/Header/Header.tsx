@@ -4,28 +4,30 @@ import '../../style/Layout/__headerLayout.scss';
 
 export default function Header() {
 
+    const name: string = 'Kevin FICHOU - Développeur iOS'
+
     return (
-        <div className="col hundred">
-            <div className="row">
-                <div className="titleHeader">
-                    <p className="titleLabel">Kevin FICHOU</p>
+        <div className="col hundred whitebg">
+            <div className="row seventyFiveHeight spaceAroundLine completeLine">
+                <div className="col titleHeader seventyFiveWidth">
+                    <p className="titleLabel">{name}</p>
                 </div>
-                <div className="row">
-                    <div>
-                        <Link to='/'>HOME</Link>
+                <div className="row spaceAroundLine thirtyWidth paddingRightTwentyFive">
+                    <div className="icon">
+                        <Link className="link" to='/'>HOME</Link>
                     </div>
-                    <div>
-                        <Link to='/'>ABOUT ME</Link>
+                    <div className="icon">
+                        <Link className="link" to='/'>ABOUT ME</Link>
                     </div>
-                    <div>
-                        <Link to='/'>PROJECTS</Link>
+                    <div className="icon">
+                        <Link className="link" to='/'>SKILLS</Link>
                     </div>
-                    <div>
-                        <Link to='/'>SKILLS</Link>
+                    <div className="icon">
+                        <Link className="link" to='/'>PROJECTS</Link>
                     </div>
                 </div>
             </div>
-            <div className="line purple"></div>
+            <div className="centerLine"><div className="line purple"></div></div>
         </div>
     )
 }
