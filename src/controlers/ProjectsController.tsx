@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import '../style/Page/__homeController.scss';
-import HomeView from "../components/Home/HomeView";
+import ProjectsView from "../components/Project/ProjectsView";
+import '../style/Layout/__projectsView.scss';
 
-export default function HomeController() {
+export default function ProjectsController() {
 
     return (
         <div className="whiteBackground col homeControllerBlock">
             <Header />
-            <HomeView />
+            <ProjectsView />
         </div>
-    )
+    );
 }

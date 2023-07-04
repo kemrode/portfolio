@@ -2,3 +2,10 @@
 @import '../Utils/variables.scss';
 @import '../Layout/_mainLayout';
 @import '../Layout/_WhiteBackground';
+@import '../Layout/_homeView.scss';
+@import '../Composants/_column.scss';
+
+.homeControllerBlock {
+    width: 100%;
+    height: 100%;
+}

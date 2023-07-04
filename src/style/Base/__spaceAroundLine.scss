@@ -1,0 +1,6 @@
+@import '../Utils/mixin.scss';
+
+.spaceAroundRow {
+    @include flexRow();
+    justify-content: space-around;
+}

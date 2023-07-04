@@ -5,12 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomeController from './controlers/HomeController';
+import ProjectsController from './controlers/ProjectsController';
 
 
 
 const rooter = createBrowserRouter([{
   path: '/',
   element: <HomeController />
+},
+{
+  path: 'projetcts',
+  element: <ProjectsController />
 }
 ])
 

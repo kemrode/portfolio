@@ -1,0 +1,6 @@
+@import '../Utils/mixin.scss';
+
+.spaceAroundCol {
+    @include flexColumn();
+    justify-content: space-around;
+}
