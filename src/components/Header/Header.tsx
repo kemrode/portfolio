@@ -20,10 +20,10 @@ export default function Header() {
                         <Link className="link" to='/'>ABOUT ME</Link>
                     </div>
                     <div className="icon">
-                        <Link className="link" to='/'>SKILLS</Link>
+                        <Link className="link" to='/skills'>SKILLS</Link>
                     </div>
                     <div className="icon">
-                        <Link className="link" to='projetcts'>PROJECTS</Link>
+                        <Link className="link" to='/projects'>PROJECTS</Link>
                     </div>
                 </div>
             </div>

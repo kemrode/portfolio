@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomeController from './controlers/HomeController';
 import ProjectsController from './controlers/ProjectsController';
+import SkillsController from './controlers/SkillsController';
 
 
 
@@ -14,8 +15,12 @@ const rooter = createBrowserRouter([{
   element: <HomeController />
 },
 {
-  path: 'projetcts',
+  path: '/projects',
   element: <ProjectsController />
+},
+{
+  path: '/skills',
+  element: <SkillsController />
 }
 ])
 
