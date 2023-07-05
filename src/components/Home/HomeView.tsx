@@ -1,11 +1,13 @@
 import React from "react";
-import { ReactComponent as SwiftLogo } from '../../assets/images/swift.svg';
-import { ReactComponent as UnityLogo } from '../../assets/images/unity.svg';
-import { ReactComponent as BlenderLogo } from '../../assets/images/blender.svg';
-import { ReactComponent as WebTechnologiesLogo } from '../../assets/images/technoWeb.svg';
-import { ReactComponent as CsharpLogo } from '../../assets/images/csharp.svg';
+
+import { ReactComponent as Swift } from '../../assets/images/icons/icons8-swift.svg';
+import { ReactComponent as Unity } from "../../assets/images/icons/icons8-unity.svg";
+import { ReactComponent as Blender } from '../../assets/images/icons/icons8-blender-3d.svg';
+import { ReactComponent as WebTechno } from '../../assets/images/icons/technoWeb.svg';
+import { ReactComponent as Csharp } from '../../assets/images/icons/icons8-c.svg';
+
 import decorationImage from '../../assets/images/coding.jpg';
-import profil from '../../assets/images/test.jpg';
+import profil from '../../assets/images/profil.jpg';
 
 export default function HomeView() {
 
@@ -19,12 +21,12 @@ export default function HomeView() {
                         <img className="imageRate" src={decorationImage} />
                     </div>
                 </div>
-                <div className="row completeLine thirtyHeight">
-                    <SwiftLogo className="twentyFiveWidth twentyFiveHeight" />
-                    <UnityLogo className="twentyFiveWidth twentyFiveHeight" />
-                    <CsharpLogo className="twentyFiveWidth twentyFiveHeight" />
-                    <BlenderLogo className="twentyFiveWidth twentyFiveHeight" />
-                    <WebTechnologiesLogo className="twentyFiveWidth twentyFiveHeight" />
+                <div className="row completeLine thirtyHeight spaceAroundLine">
+                    <Swift className="icon-75" />
+                    <Unity className="icon-75" />
+                    <Blender className="icon-75" />
+                    <WebTechno className="icon-75" />
+                    <Csharp className="icon-75" />
                 </div>
             </div>
             <div className="col fortyWidth seventyFiveHeight">
