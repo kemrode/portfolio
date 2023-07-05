@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.0136ad8d.css",
+    "main.js": "/react-gh-pages/static/js/main.e0c931e3.js",
+    "static/js/787.778d5b92.chunk.js": "/react-gh-pages/static/js/787.778d5b92.chunk.js",
+    "static/media/coding.jpg": "/react-gh-pages/static/media/coding.2d7eef51dd99826b94d7.jpg",
+    "static/media/profil.jpg": "/react-gh-pages/static/media/profil.d425435f870a91a179b6.jpg",
+    "static/media/test.jpg": "/react-gh-pages/static/media/test.57d24778183eca662f82.jpg",
+    "static/media/technoWeb.svg": "/react-gh-pages/static/media/technoWeb.5f31bd283e4771d2cc6d5f75fa0e843f.svg",
+    "static/media/icons8-blender-3d.svg": "/react-gh-pages/static/media/icons8-blender-3d.f3abe478164e9a516115600f17ac3ee3.svg",
+    "static/media/icons8-c.svg": "/react-gh-pages/static/media/icons8-c.3cd092b2cc8d9230a8a1c14a565946d2.svg",
+    "static/media/icons8-unity.svg": "/react-gh-pages/static/media/icons8-unity.e5094c2ef53f82ec0446f54ef0c49421.svg",
+    "index.html": "/react-gh-pages/index.html",
+    "static/media/icons8-swift.svg": "/react-gh-pages/static/media/icons8-swift.5793bfd615949518e48a9db1047f92be.svg",
+    "main.0136ad8d.css.map": "/react-gh-pages/static/css/main.0136ad8d.css.map",
+    "main.e0c931e3.js.map": "/react-gh-pages/static/js/main.e0c931e3.js.map",
+    "787.778d5b92.chunk.js.map": "/react-gh-pages/static/js/787.778d5b92.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0136ad8d.css",
+    "static/js/main.e0c931e3.js"
+  ]
+}
