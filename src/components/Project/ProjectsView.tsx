@@ -30,7 +30,7 @@ export default function ProjectsView() {
     const runnerThree: ProjectType = {
         title: "Runner 3",
         explanation: "During my apprentice pathway for Unity, I have to do an exercise which be a runner game where your character is running and differents obstacles appear, your task is to jump over them or, if you touch them, the game is over.",
-        imgName: "test.jpg",
+        imgName: "runner.jpg",
         link: "https://github.com/kemrode/prototypeRunner3",
         status: "In Progress"
     }

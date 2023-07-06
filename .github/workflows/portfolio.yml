@@ -3,4 +3,18 @@ run-name: ${{ github.actor }} portfolio
 on: ['push']
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }} 
+  IMAGE_NAME: ${{ github.repository }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - uses: actions/cache@v3
+          with:
+            path: |
+              /node_modules
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        - run: |
+            cd portfolio-v-one
+            npm install
+            npm run build
