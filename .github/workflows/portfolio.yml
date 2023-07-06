@@ -1,0 +1,6 @@
+name: portfolio
+run-name: ${{ github.actor }} portfolio
+on: ['push']
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }} 
