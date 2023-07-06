@@ -9,7 +9,7 @@ export default function Header() {
     return (
         <div className="col hundred whitebg">
             <div className="row seventyFiveHeight spaceAroundLine completeLine">
-                <div className="colSimply centerFlexStart titleHeader seventyFiveWidth">
+                <div className="colSimply centerFlexStart titleHeader seventyWidth">
                     <p className="titleLabel">{name}</p>
                 </div>
                 <div className="row spaceAroundLine thirtyWidth paddingRightTwentyFive">
@@ -17,7 +17,7 @@ export default function Header() {
                         <Link className="link" to='/'>HOME</Link>
                     </div>
                     <div className="icon">
-                        <Link className="link" to='/'>ABOUT ME</Link>
+                        <Link className="link" to='/aboutme'>ABOUT ME</Link>
                     </div>
                     <div className="icon">
                         <Link className="link" to='/skills'>SKILLS</Link>

@@ -2,3 +2,31 @@
     color: $MidBlue;
     font-size: 1em;
 }
+
+.txt-reg-blue-hover {
+    color: $MidBlue;
+    font-size: 1.1em;
+
+    &:hover {
+        color: $MidBlue;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+}
+
+.txt-reg-dkbl-bold {
+    color: $DarkBlue;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.txt-reg-dkbl-bold-white-hover {
+    color: $DarkBlue;
+    font-size: 1.1em;
+    font-weight: bold;
+
+    &:hover {
+        color: white;
+        font-size: 1.2em;
+    }
+}

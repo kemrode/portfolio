@@ -1,0 +1,22 @@
+.cellAroundBdBk {
+    border-radius: 5000px;
+    border: 2px solid $DarkPurple;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.cell-rd-bck-purple {
+    border-radius: 5000px;
+    background: $DarkPurple;
+    border: 2px solid $DarkPurple;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+
+.cell-rd-bd-purple-hover {
+    border-radius: 5000px;
+    border: 2px solid $DarkPurple;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}

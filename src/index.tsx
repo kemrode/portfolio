@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomeController from './controlers/HomeController';
 import ProjectsController from './controlers/ProjectsController';
 import SkillsController from './controlers/SkillsController';
+import AboutMeController from './controlers/AboutMeController';
 
 
 
@@ -21,6 +22,10 @@ const rooter = createBrowserRouter([{
 {
   path: '/skills',
   element: <SkillsController />
+},
+{
+  path: '/aboutme',
+  element: <AboutMeController />
 }
 ])
 
