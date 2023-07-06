@@ -22,7 +22,7 @@ export default function ProjectsView() {
     const knowYourCodeGod: ProjectType = {
         title: "DI20 Know your Code God",
         explanation: "My first autonomious iOS application project. Coded for a demonstration at school, it is a quizz game entirely programms with Swift, Apple language, with differents graphics elements with a random management to discover who is who behind the little description.",
-        imgName: "test.jpg",
+        imgName: "di20.jpg",
         link: "https://github.com/kemrode/DI20_know_your_code_god",
         status: "Finish"
     }

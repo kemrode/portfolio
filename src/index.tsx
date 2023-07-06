@@ -16,15 +16,15 @@ const rooter = createBrowserRouter([{
   element: <HomeController />
 },
 {
-  path: '/projects',
+  path: 'projects',
   element: <ProjectsController />
 },
 {
-  path: '/skills',
+  path: 'skills',
   element: <SkillsController />
 },
 {
-  path: '/aboutme',
+  path: 'aboutme',
   element: <AboutMeController />
 }
 ])
