@@ -5,4 +5,6 @@ export type Language = {
     projects: string;
     blog: string;
     devName: string;
+    welcome: string;
+    presentation: string;
 }

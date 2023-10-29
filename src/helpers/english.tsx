@@ -8,7 +8,9 @@ export function English() {
         skills: "My Skills",
         projects: "My Projects",
         blog: "Blog",
-        devName: "Kevin Fichou - Développeur iOS"
+        devName: "Kevin Fichou - Développeur iOS",
+        welcome: "Hi, I'm Kevin and welcome aboard !",
+        presentation: "As a orevious petty-officer and a three years experimented iOS developper I'm able to bring to you responses to bring to lfe your iOS projects."
     }
     return language;
 }
