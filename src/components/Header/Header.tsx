@@ -6,8 +6,6 @@ import { Language } from "../../helpers/languages";
 
 export default function Header() {
 
-    const name: string = 'Kevin FICHOU - Développeur iOS'
-    const languageSelected: string = 'Fr'
     const [langue, setLangue] = useState<Language>();
 
     useEffect(() => {
