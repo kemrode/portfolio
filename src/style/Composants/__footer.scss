@@ -1,0 +1,13 @@
+@import '../Utils/mixin.scss';
+@import '../Utils/variables.scss';
+@import '../Composants/_smallImageFooterStyle.scss';
+@import '../Layout/_textBold.scss';
+
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: $MainWhite;
+    background-color: $MidBlue;
+}
