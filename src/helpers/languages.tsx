@@ -7,4 +7,5 @@ export type Language = {
     devName: string;
     welcome: string;
     presentation: string;
+    job: string;
 }

@@ -3,6 +3,7 @@ import Header from "../components/Header/Header";
 import '../style/Page/__homeController.scss';
 import HomeView from "../components/Home/HomeView";
 import Footer from "../components/Footer/Footer";
+import TabBar from "../components/Footer/TabBar";
 
 export default function HomeController() {
 
@@ -11,6 +12,7 @@ export default function HomeController() {
             <Header />
             <HomeView />
             <Footer />
+            <TabBar />
         </div>
     )
 }

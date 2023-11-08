@@ -7,9 +7,10 @@ export function French() {
         skills: "Compétences",
         projects: "Projets",
         blog: "Blog",
-        devName: "Kevin Fichou - Développeur iOS",
+        devName: "Kevin Fichou",
         welcome: "Bonjour et bienvenue sur mon site !",
-        presentation: "Développeur et ancien sous-officier, je suis prêt à mener à bien les missions de programmation que vous me confierez. Fort de trois années d'expériences sur le développement iOS, je suis à même de vous apporter des réponses pour vos idées d'applications mobiles iOS."
+        presentation: "Développeur et ancien sous-officier, je suis prêt à mener à bien les missions de programmation que vous me confierez. Fort de trois années d'expériences sur le développement iOS, je suis à même de vous apporter des réponses pour vos idées d'applications mobiles iOS.",
+        job: "Développeur iOS"
     }
     return language;
 }

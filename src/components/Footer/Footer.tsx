@@ -11,7 +11,7 @@ export default function Footer() {
     const mailImage = require("../../assets/images/icons/mail.png");
 
     return (
-        <div className="row hundred footer">
+        <div className="footer">
             <div className="row fiftyWidth spaceAroundLine">
                 <div className="row twentyFiveWidth center">
                     <div className="col fiftyWidth center">

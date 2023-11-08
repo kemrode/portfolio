@@ -1,5 +1,6 @@
 @import '../Utils/mixin.scss';
 @import '../Utils/variables.scss';
+@import '../Composants/_column.scss';
 
 .imageRate {
     width: 100%;
@@ -20,4 +21,24 @@
 .imageBlock {
     width: 300px;
     height: 300px;
+}
+
+.imageBox {
+    @include flexColumn();
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 48em) {
+    .imageBox {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .imageBox {
+        width: 200px;
+        height: 200px;
+    }
 }

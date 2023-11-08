@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import '../../style/Composants/__welcomeTextBloc.scss';
 import { Language } from "../../helpers/languages";
 import { French } from "../../helpers/french";
 
@@ -13,10 +14,14 @@ export function WelcomeTextBloc() {
     }, []);
 
     return (
-        <div className="colSimply completeBlock topCenter">
-            <p className="sevenHundredAndSixtyHeightPXWidth presentationTitle">{welcomeTitle}</p>
+        <div className="textBloc">
+            <div className="titleExplanation">
+                <p className="welcomeTextTitle">{welcomeTitle}</p>
+            </div>
             <br></br>
-            <p className="sevenHundredAndSixtyHeightPXWidth presentationText">{presentationText}</p>
+            <div className="textExplanation">
+                <p className="welcomeText">{presentationText}</p>
+            </div>
         </div>
     )
 }
