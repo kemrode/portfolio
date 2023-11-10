@@ -5,7 +5,7 @@ export function RoundedImage() {
     const profilPicture = require('../../assets/images/profil.jpg');
 
     return (
-        <div className="colSimply imageBlock center">
+        <div className="imageBox">
             <img className="roundedImage" src={profilPicture} />
 
         </div>

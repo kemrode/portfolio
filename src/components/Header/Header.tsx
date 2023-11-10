@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../../style/Layout/__headerLayout.scss';
 import { French } from "../../helpers/french";
 import { Language } from "../../helpers/languages";
+import { ReactComponent as Home } from '../../assets/images/icons/home.svg';
 
 export default function Header() {
 
@@ -13,10 +14,18 @@ export default function Header() {
     }, [])
 
     return (
-        <div className="col hundred whitebg">
-            <div className="row seventyFiveHeight spaceAroundLine completeLine">
+        <div className="header">
+            <div className="mobileHeader">
+                <Link to="/" className="homeIcon">
+                    <Home />
+                </Link>
+                <div className="nameLabel">
+                    <p className="name">{langue?.devName}</p>
+                </div>
+            </div>
+            <div className="navIcons">
                 <div className="colSimply centerFlexStart titleHeader fiftyWidth">
-                    <Link className="titleLabel" to='/'>{langue?.devName}</Link>
+                    <Link className="titleLabel" to='/'>{langue?.devName} - {langue?.job}</Link>
                 </div>
                 <div className="row spaceAroundLine fiftyWidth paddingRightTwentyFive">
                     <div className="icon">

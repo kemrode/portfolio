@@ -1,0 +1,78 @@
+@import '../Utils/mixin.scss';
+@import '../Utils/variables.scss';
+@import '../Composants/_column.scss';
+
+.welcomeTextTitle {
+    @include titletext();
+}
+
+.welcomeText {
+    @include presentationText();
+}
+
+// Media
+@media screen and (min-width: 48em) {
+    .textBloc {
+        @include flexColumn();
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: center;
+
+        & .titleExplanation {
+            & .welcomeTextTitle {
+                width: 768px;
+                padding-left: 25px;
+                font-size: 1.6em;
+            }
+        }
+
+        & .textExplanation {
+            & .welcomeText {
+                width: 768px;
+                height: auto;
+                font-size: 1.2em;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 48em) {
+    .textBloc {
+        @include flexColumn();
+        width: 90%;
+        height: 50%;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        & .titleExplanation {
+            width: 100%;
+            height: 20%;
+            @include flexRow();
+            justify-content: flex-start;
+            align-items: center;
+
+            & .welcomeTextTitle {
+                padding-left: 25px;
+                width: 100%;
+                font-size: 1.3em;
+            }
+        }
+
+        & .textExplanation {
+            width: 100%;
+            height: 80%;
+            @include flexRow();
+            justify-content: center;
+            align-items: flex-start;
+
+            & .welcomeText {
+                width: 90%;
+                text-align: justify;
+                font-size: 1.1em;
+            }
+        }
+    }
+}

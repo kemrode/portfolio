@@ -9,3 +9,22 @@
     display: flex;
     flex-direction: column;
 }
+
+@mixin flexReverseColumn() {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@mixin titletext() {
+    color: $DarkBlue;
+    font-weight: bold;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+@mixin presentationText() {
+    color: $DarkBlue;
+    font-weight: bold;
+    text-align: justify;
+    word-wrap: break-word;
+}

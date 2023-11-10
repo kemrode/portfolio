@@ -17,3 +17,121 @@
 @import '../Base/_fiftyHeight.scss';
 @import '../Layout/_presentationText.scss';
 @import '../Layout/_icon.scss';
+
+@mixin technologiesRow() {
+    @include flexRow();
+    width: 100%;
+    height: 30%;
+    justify-content: space-around;
+}
+
+// Media
+@media screen and (min-width: 48em) {
+    .homeView {
+        @include flexRow();
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+
+        & .welcomeBlock {
+            @include col();
+            width: 60%;
+            height: 100%;
+        }
+
+        & .decorateImgBlock {
+            @include flexColumn();
+            width: 100%;
+            height: 100%;
+            @include center();
+
+            & .exampleImage {
+                @include col();
+                width: 75%;
+                height: 70%;
+            }
+        }
+
+        & .personal {
+            @include col();
+            height: 100%;
+            width: 50%;
+
+            & .myPicture {
+                @include flexRow();
+                width: 100%;
+                height: 50%;
+                @include center();
+
+                & .jobTitle {
+                    display: none;
+                }
+            }
+
+            & .technologies {
+                @include technologiesRow();
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 48em) {
+    .homeView {
+        @include flexReverseColumn();
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+
+        & .welcomeBlock {
+            @include col();
+            width: 100%;
+            height: 100%;
+        }
+
+        & .decorateImgBlock {
+            display: none;
+        }
+
+        & .personal {
+            @include flexColumn();
+            justify-content: space-around;
+            height: 75%;
+            width: 100%;
+
+            & .myPicture {
+                @include flexRow();
+                width: 100%;
+                height: 50%;
+
+                & .jobTitle {
+                    @include flexRow();
+                    width: 40%;
+                    height: 30%;
+                    align-items: center;
+                    justify-content: flex-end;
+                    @include titletext();
+                    font-size: 1.1em;
+                }
+
+                & .personalPicture {
+                    @include flexRow();
+                    width: 60%;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: first baseline;
+                    position: relative;
+                    top: -90px;
+                    right: -20px;
+                    z-index: 5;
+                }
+            }
+
+            & .technologies {
+                @include technologiesRow();
+            }
+        }
+    }
+
+
+}

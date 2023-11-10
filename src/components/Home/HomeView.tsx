@@ -14,6 +14,7 @@ import { RoundedImage } from "../RoundedImage/RoundedImage";
 export default function HomeView() {
 
     const presentation: string = French().presentation;
+    const jobTitle: string = "Développeur iOS";
     const welcomeTitle: string = French().welcome;
     const [data, setData] = useState([
         <Swift className="icon-75" />,
@@ -24,20 +25,23 @@ export default function HomeView() {
     ]);
 
     return (
-        <div className="spaceAroundRow completeBlock">
-            <div className="col sixtyWidth">
-                <div className="colSimply seventyFiveHeight completeLine center">
-                    <div className="col seventyFiveWidth seventyHeight">
+        <div className="homeView ">
+            <div className="welcomeBlock">
+                <div className="decorateImgBlock">
+                    <div className="exampleImage">
                         <img className="imageRate" src={decorationImage} />
                     </div>
                 </div>
                 <WelcomeTextBloc />
             </div>
-            <div className="col fortyWidth seventyFiveHeight">
-                <div className="row completeLine center fiftyHeight">
-                    <RoundedImage />
+            <div className="personal">
+                <div className="myPicture">
+                    <p className="jobTitle">{jobTitle}</p>
+                    <div className="personalPicture">
+                        <RoundedImage />
+                    </div>
                 </div>
-                <div className="row completeLine thirtyHeight spaceAroundLine">
+                <div className="technologies">
                     {data.map(element => <div>{element}</div>)}
                 </div>
             </div>

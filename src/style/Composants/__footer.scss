@@ -2,12 +2,27 @@
 @import '../Utils/variables.scss';
 @import '../Composants/_smallImageFooterStyle.scss';
 @import '../Layout/_textBold.scss';
+@import '../Layout/_headerLayout.scss';
 
-.footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: $MainWhite;
-    background-color: $MidBlue;
+
+
+// Media
+@media screen and (min-width: 48em) {
+    .footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: $MainWhite;
+        background-color: $MidBlue;
+        @include hundred();
+        @include flexRow();
+    }
+}
+
+
+@media screen and (max-width: 48em) {
+    .footer {
+        display: none;
+    }
 }
