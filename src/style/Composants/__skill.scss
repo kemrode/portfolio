@@ -1,0 +1,37 @@
+@import '../Utils/mixin.scss';
+@import '../Utils/variables.scss';
+
+
+
+.skill {
+    @include flexRow();
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 4px 12px;
+    width: 80%;
+    height: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px 50px 20px 50px;
+    margin-bottom: 25px;
+
+    & .skillColor {
+        width: 35%;
+        height: 100%;
+        border-radius: 20px 50px 0px 50px;
+    }
+
+    & .skillText {
+        @include flexRow();
+        justify-content: flex-start;
+        align-items: center;
+        width: 75%;
+        height: 100%;
+
+        & .skillName {
+            @include titletext();
+            width: 100%;
+            text-align: center;
+            word-wrap: break-word;
+        }
+    }
+}

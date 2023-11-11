@@ -78,6 +78,9 @@
         @include hundred();
         @include col();
         background-color: $MainWhite;
+        position: fixed;
+        top: 0;
+        left: 0;
 
         & .mobileHeader {
             display: none;

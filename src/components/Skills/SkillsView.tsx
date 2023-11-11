@@ -1,39 +1,31 @@
 import React from "react";
-import { Skill } from "../../controlers/SkillsController";
+import SkillsComponent from "./SkillsComponent";
+import { Skill } from "../../Model/SkillModel";
 
-export default function SkillsView(props: { skills: Skill[], softSkills: Skill[] }) {
+export default function SkillsView(props: { hardSkills: Skill[], softSkills: Skill[], technicalSkills: Skill[] }) {
 
-    const hardSkillsTitle: string = "HardSkill";
-    const softSkillsTitle: string = "SoftSkill";
-    const skills: Skill[] = props.skills;
+    const hardSkillsTitle: string = "Savoir-Faire";
+    const softSkillsTitle: string = "Savoir-Être";
+    const technicalSkillsTitle: string = "Technique";
+    const hardSkills: Skill[] = props.hardSkills;
+    const technicalSkills: Skill[] = props.technicalSkills;
     const softSkills: Skill[] = props.softSkills;
 
-    return (
-        <div className="row completeBlock">
-            <div className="colSimply fsc fullHeight fiftyWidth ">
-                <div className="colSimply ninetyHeight seventyFiveWidth mtfftpx fsc">
-                    <div className="row twentyHeigth completeLine center"><p className="title">{hardSkillsTitle}</p></div>
-                    <div className="colSimply completeLine fullHeight fsc mtfftpx">
-                        {skills && skills.map((skill, index) =>
-                            <div className="row twentyHeight center ffw">
-                                <p className="textRegular">{skill.title}</p>
-                            </div>)}
-                    </div>
-                </div>
-            </div>
-            <div className="colSimply rb3px"></div>
-            <div className="colSimply fsc fullHeight fiftyWidth">
-                <div className="colSimply ninetyHeight seventyFiveWidth mtfftpx fsc">
-                    <div className="row twentyHeigth completeLine center"><p className="title">{softSkillsTitle}</p></div>
-                    <div className="colSimply completeLine fullHeight fsc mtfftpx">
-                        {softSkills && softSkills.map((skill, index) =>
-                            <div className="row twentyHeight center ffw">
-                                <p className="textRegular">{skill.title}</p>
-                            </div>)}
-                    </div>
-                </div>
-            </div>
+    const hardSkillColor: string = "#2D4B73";
+    const softSkillColor: string = "#280BD4";
+    const technicalSkillColor: string = "#A60D0D";
 
+    return (
+        <div className="mainSkillsView">
+            <div className="skillsColumn">
+                <SkillsComponent title={technicalSkillsTitle} skills={technicalSkills} color={technicalSkillColor} />
+            </div>
+            <div className="skillsColumn">
+                <SkillsComponent title={hardSkillsTitle} skills={hardSkills} color={hardSkillColor} />
+            </div>
+            <div className="skillsColumn">
+                <SkillsComponent title={softSkillsTitle} skills={softSkills} color={softSkillColor} />
+            </div>
         </div>
     );
 }

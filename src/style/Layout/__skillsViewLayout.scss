@@ -1,0 +1,66 @@
+@import '../Utils/mixin.scss';
+@import '../Utils/variables.scss';
+
+@mixin HighScreenMainSkillsView() {
+    @include flexRow();
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+@mixin MobileScreenMainSkillsView() {
+    @include flexColumn();
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+}
+
+@mixin PurpleSeparator() {
+    @include flexColumn();
+    border-right: 3px solid $DarkPurple;
+    height: 85%;
+    margin-top: 25px;
+}
+
+@media screen and (min-width: 48em) {
+    .mainSkillsView {
+        @include HighScreenMainSkillsView();
+
+        & .skillsColumn {
+            @include flexColumn();
+            justify-content: flex-start;
+            align-items: center;
+            width: 33%;
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    .purpleSeparator {
+        @include PurpleSeparator();
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .mainSkillsView {
+        @include MobileScreenMainSkillsView();
+        @include ScrollableDiv();
+
+        & .skillsColumn {
+            width: 100%;
+        }
+    }
+
+    .purpleSeparator {
+        display: none;
+    }
+
+}
