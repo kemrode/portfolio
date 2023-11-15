@@ -1,0 +1,62 @@
+@import '../Utils/mixin.scss';
+@import '../Utils/variables.scss';
+
+@mixin SkillsColumn() {
+    @include flexColumn();
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media screen and (min-width: 48em) {
+
+    .SkillColumn {
+        @include SkillsColumn();
+        width: 100%;
+    }
+
+    .SkillTitle {
+        @include TitleSet();
+
+        & .title {
+            font-size: 1.4em;
+        }
+    }
+
+    .skillDisplayingColumn {
+        @include flexColumn();
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:48em) {
+
+    .SkillColumn {
+        @include SkillsColumn();
+        width: 100%;
+        top: 90px;
+    }
+
+    .SkillTitle {
+        @include TitleSet();
+        margin-bottom: 25px;
+        text-align: left;
+
+        & .title {
+            font-size: 1.2em;
+            width: 100%;
+            text-align: left;
+            padding-left: 25px;
+        }
+    }
+
+    .skillDisplayingColumn {
+        @include flexColumn();
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
