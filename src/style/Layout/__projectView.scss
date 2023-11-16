@@ -1,0 +1,88 @@
+@import '../Utils/mixin.scss';
+@import '../Utils/variables.scss';
+
+.projectView {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin HighScreenProjectView() {
+    @include flexRow();
+    justify-content: flex-start;
+}
+
+@mixin SmallScreenProjectView() {
+    @include flexColumn();
+    justify-content: space-between;
+}
+
+@mixin TextContainer() {
+    @include flexColumn();
+    width: 35%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin ProjectsContainer() {
+    @include flexColumn();
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .projectView {
+        @include HighScreenProjectView();
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        & .textContainer {
+            @include TextContainer();
+
+            &__container {
+                @include flexColumn();
+                justify-content: flex-start;
+                align-items: center;
+                width: 80%;
+                height: 80%;
+                border-radius: 25px;
+                background-color: $GreyBlue;
+                padding: 15px;
+
+                & p {
+                    color: $MainWhite;
+                    font-size: 1.3em;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        & .projectsContainer {
+            @include ProjectsContainer();
+            width: 65%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .projectView {
+        @include SmallScreenProjectView();
+
+        & .textContainer {
+            display: none;
+        }
+
+        & .projectsContainer {
+            @include ProjectsContainer();
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
