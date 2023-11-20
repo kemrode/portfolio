@@ -10,24 +10,221 @@
 @import '../Base/_sixtyWidth.scss';
 @import '../Base/_scrollBlock.scss';
 
-.cellLayout {
+@mixin HighScreenCellLayout() {
     @include flexRow();
-    width: 100%;
+    width: 80%;
     height: 200px;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid black;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-top: 15px;
+    border-radius: 25px;
 }
 
-.imageRef {
-    border-right: 1px solid black;
+@mixin SmallScreenCellLayout() {
+    @include flexRow();
+    width: 90%;
+    height: 200px;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-top: 15px;
+    border-radius: 25px;
 }
 
-.cellFxH-50 {
-    height: 50px;
+@mixin TextContainer() {
+    @include flexColumn();
+    width: 100%;
+    height: 100%;
 }
 
-.cellFxW-270 {
-    width: 270px;
+@mixin ProjectImageBloc() {
+    @include flexColumn();
+    width: 25%;
+    height: 100%;
+}
+
+@mixin ProjectImageDisplay() {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px 0px 0px 25px;
+}
+
+@mixin TitleBloc() {
+    @include flexRow();
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+
+    & p {
+        color: $DarkBlue;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+}
+
+@mixin TextBloc() {
+    @include flexRow();
+    height: 70%;
+    justify-content: center;
+    text-align: left;
+}
+
+@mixin HighTextBloc {
+    @include TextBloc();
+    align-items: flex-start;
+    width: 100%;
+}
+
+@mixin SmallTextBloc() {
+    @include TextBloc();
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+@mixin TextToDisplay() {
+    width: 90%;
+    height: 100%;
+    color: $DarkBlue;
+    word-wrap: nowrap;
+}
+
+@mixin SubtextBloc() {
+    @include flexRow();
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+
+}
+
+@mixin ProjectLink() {
+    @include flexRow();
+    width: 75%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+
+    & p {
+        & a {
+            color: $DarkBlue;
+            font-size: 0.9em;
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin ProjectStatus() {
+    @include flexRow();
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+        color: $DarkBlue;
+        font-size: 1.1em;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .cellLayout {
+        @include HighScreenCellLayout();
+
+        &__projectImage {
+            @include ProjectImageBloc();
+
+            &--image {
+                @include ProjectImageDisplay();
+            }
+        }
+
+        &__textContainer {
+            @include TextContainer();
+
+            &--titleBloc {
+                @include TitleBloc();
+
+                & .statusPoint {
+                    display: none;
+                }
+            }
+
+            &--textBloc {
+                @include HighTextBloc();
+
+                & p {
+                    font-size: 1.1em;
+                }
+
+            }
+
+            &--subtextBloc {
+                @include SubtextBloc();
+            }
+        }
+    }
+
+    .projectLink {
+        @include ProjectLink();
+    }
+
+    .projectStatus {
+        @include ProjectStatus();
+    }
+
+    .textToDisplay {
+        @include TextToDisplay();
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .cellLayout {
+        @include SmallScreenCellLayout();
+
+        &__projectImage {
+            @include ProjectImageBloc();
+
+            &--image {
+                @include ProjectImageDisplay();
+            }
+        }
+
+        &__textContainer {
+            @include TextContainer();
+
+            &--titleBloc {
+                @include TitleBloc();
+
+                & .statusPoint {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 500px;
+                }
+            }
+
+            &--textBloc {
+                @include SmallTextBloc();
+
+                & p {
+                    font-size: 0.8em;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+
+            &--subtextBloc {
+                display: none;
+            }
+        }
+    }
+
+    .textToDisplay {
+        @include TextToDisplay();
+    }
 }
