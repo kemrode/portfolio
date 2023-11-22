@@ -24,7 +24,7 @@
 @mixin SmallScreenCellLayout() {
     @include flexRow();
     width: 90%;
-    height: 200px;
+    height: 180px;
     justify-content: flex-start;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -34,14 +34,14 @@
 
 @mixin TextContainer() {
     @include flexColumn();
-    width: 100%;
     height: 100%;
 }
 
 @mixin ProjectImageBloc() {
     @include flexColumn();
-    width: 25%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin ProjectImageDisplay() {
@@ -50,17 +50,36 @@
     border-radius: 25px 0px 0px 25px;
 }
 
+@mixin ProjectImageDisplaySmall() {
+    width: 150px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+}
+
 @mixin TitleBloc() {
     @include flexRow();
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 20%;
 
     & p {
         color: $DarkBlue;
-        font-size: 1.3em;
         font-weight: bold;
+        font-size: 1.3em;
+    }
+}
+
+@mixin TitleBlocSmall() {
+    @include flexRow();
+    justify-content: flex-start;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+
+    & p {
+        color: $DarkBlue;
+        font-weight: bold;
+        font-size: 1.1em;
     }
 }
 
@@ -78,10 +97,12 @@
 }
 
 @mixin SmallTextBloc() {
-    @include TextBloc();
-    align-items: center;
-    width: 100%;
-    height: 100px;
+    padding-top: 25px;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-align: left;
 }
 
 @mixin TextToDisplay() {
@@ -137,6 +158,7 @@
 
         &__projectImage {
             @include ProjectImageBloc();
+            width: 25%;
 
             &--image {
                 @include ProjectImageDisplay();
@@ -145,6 +167,7 @@
 
         &__textContainer {
             @include TextContainer();
+            width: 100%;
 
             &--titleBloc {
                 @include TitleBloc();
@@ -188,21 +211,35 @@
 
         &__projectImage {
             @include ProjectImageBloc();
+            width: 50%;
+
 
             &--image {
-                @include ProjectImageDisplay();
+                @include ProjectImageDisplaySmall();
             }
         }
 
         &__textContainer {
             @include TextContainer();
+            width: 50%;
+
+            & p {
+                font-size: 1em;
+            }
 
             &--titleBloc {
-                @include TitleBloc();
+                @include TitleBlocSmall();
+
+                & p {
+                    width: 75%;
+                    text-align: center;
+                    padding-top: 10px;
+                }
 
                 & .statusPoint {
-                    width: 45px;
-                    height: 45px;
+                    margin-top: 10px;
+                    width: 35px;
+                    height: 35px;
                     border-radius: 500px;
                 }
             }
@@ -212,9 +249,8 @@
 
                 & p {
                     font-size: 0.8em;
+                    text-align: left;
                     overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
                 }
             }
 
