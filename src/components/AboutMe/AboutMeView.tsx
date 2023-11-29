@@ -1,6 +1,11 @@
 import React from "react";
 import profil from '../../assets/images/profil.jpg';
 import HobbyView from "./HobbyView";
+import AboutMePhoto from "./AboutMePhoto";
+import Footer from "../Footer/Footer";
+import WhoAmIView from "./WhoAmIView";
+import '../../style/Layout/__aboutMeView.scss';
+import AboutMeHobbiesView from "./AboutMeHobbiesView";
 
 
 export default function AboutMeView() {
@@ -15,26 +20,11 @@ export default function AboutMeView() {
     const hobbiesArray: string[] = ["Wargames", "scale models", "video games", "SF and Fantasy readings", "History", "Create Video Games", "Writing novels", "Boxe"]
 
     return (
-        <div className="colSimply completeLine fullHeight sa-cent scrollBlock">
-            <div className="row seventyFiveWidth fiftyHeight fsc">
-                <div className="row fiftyWidth fullHeight center">
-                    <img className="roundedImage shad-bor-purple" src={profil} alt="profil picture of Kevin FICHOU" />
-                </div>
-                <div className="colSimply centerFlexStart fullHeight fiftyWidth">
-                    <p className="subTitBdDkBl">{name}</p>
-                    <p className="subTitBdDkBl">{adress}</p>
-                    <p className="subTitBdDkBl">{phone}</p>
-                    <p className="subTitBdDkBl">{email}</p>
-                    <a href="https://www.linkedin.com/in/kevin-fichou-177328172/"><p className="subTitBdDkBl">{linkedin}</p></a>
-                </div>
-            </div>
-            <div className="row seventyFiveWidth twentyFiveHeight center">
-                <p className="txt-reg-blue-hover">{personalDescription}</p>
-            </div>
-            <div className="colSimply ninetyWidth fiftyHeight center">
-                <div className="grid-1 completeBlock">
-                    {hobbiesArray && hobbiesArray.map((hobby, index) => <HobbyView hobby={hobby} />)}
-                </div>
+        <div className="aboutMeView">
+            <AboutMePhoto />
+            <div className="aboutMeView__resumeAndHobbies">
+                <WhoAmIView />
+                <AboutMeHobbiesView />
             </div>
         </div>
     );

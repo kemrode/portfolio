@@ -1,0 +1,40 @@
+@import '../Utils/mixin.scss';
+@import '../Utils/variables.scss';
+
+@mixin AboutMeView() {
+    @include flexRow();
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    justify-content: space-evenly;
+    background-color: $MainWhite;
+}
+
+@mixin ResumeeAndHobbies() {
+    @include flexColumn();
+    width: 65%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px
+}
+
+@media screen and (max-width: 48em) {
+    .aboutMeView {
+        @include AboutMeView();
+
+        &__resumeAndHobbies {
+            @include ResumeeAndHobbies();
+        }
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .aboutMeView {
+        @include AboutMeView();
+
+        &__resumeAndHobbies {
+            @include ResumeeAndHobbies();
+        }
+    }
+}

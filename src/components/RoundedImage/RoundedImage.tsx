@@ -7,7 +7,6 @@ export function RoundedImage() {
     return (
         <div className="imageBox">
             <img className="roundedImage" src={profilPicture} />
-
         </div>
     )
 }

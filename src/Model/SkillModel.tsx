@@ -9,7 +9,8 @@ export type Skill = {
 enum SkillType {
     Softskill,
     Hardskill,
-    TechnicalSkill
+    TechnicalSkill,
+    Hobby
 }
 
 function AddNewSkill(title: string, type: string) {
@@ -17,6 +18,7 @@ function AddNewSkill(title: string, type: string) {
     const softskillColor: string = "#";
     const hardskillColor: string = "#";
     const technicalColor: string = "#";
+    const hobbyColor: string = "#5B0AC9";
 
     const newSkill: Skill = {
         title: title ?? "defaultTitle",
@@ -26,21 +28,39 @@ function AddNewSkill(title: string, type: string) {
 
     switch (type) {
         case "softskill":
-            newSkill.title = "Savoir-Être"
+            newSkill.title = "Savoir-Être";
             newSkill.color = softskillColor;
             break;
         case "hardskill":
-            newSkill.title = "Savoir-Faire"
+            newSkill.title = "Savoir-Faire";
             newSkill.color = hardskillColor;
             break;
         case "technical":
-            newSkill.title = "Technique"
+            newSkill.title = "Technique";
             newSkill.color = technicalColor;
+            break;
+        case "hobby":
+            newSkill.title = "Loisirs";
+            newSkill.color = hobbyColor;
             break;
         default:
             break;
     }
     return newSkill;
+}
+
+export const Hobbies = () => {
+    const typeOfSkill: string = SkillType.Hobby.toString();
+    const warhammer: Skill = AddNewSkill("Wargames", typeOfSkill);
+    const reading: Skill = AddNewSkill("Lecture", typeOfSkill);
+    const unity: Skill = AddNewSkill("Unity3D", typeOfSkill);
+    const blender: Skill = AddNewSkill("Modélisation 3D", typeOfSkill);
+    const wrinting: Skill = AddNewSkill("Ecriture d'invention", typeOfSkill);
+    const sport: Skill = AddNewSkill("Savate", typeOfSkill);
+    const history: Skill = AddNewSkill("Histoire", typeOfSkill);
+    const learning: Skill = AddNewSkill("Apprendre", typeOfSkill);
+
+    return [warhammer, reading, unity, blender, wrinting, sport, history, learning];
 }
 
 export const SoftSkills = () => {
