@@ -1,0 +1,32 @@
+@import '../Utils/mixin.scss';
+@import '../Utils/variables.scss';
+
+.aboutMeHobbiesView {
+    @include flexColumn();
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    gap: 2em;
+}
+
+.aboutHobbiesGrid {
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 15em 15em 15em 15em;
+    grid-template-rows: 5em;
+}
+
+.aboutHobbiesTitle {
+    @include flexRow();
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+        color: $DarkBlue;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+}

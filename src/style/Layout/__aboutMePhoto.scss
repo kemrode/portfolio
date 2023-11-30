@@ -1,0 +1,58 @@
+@import '../Utils/mixin.scss';
+@import '../Utils/variables.scss';
+
+@mixin AboutMePhoto() {
+    @include flexColumn();
+    width: 35%;
+    height: 100%;
+    margin-top: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+@mixin RecapView() {
+    @include flexColumn();
+    width: 80%;
+    height: 30%;
+    justify-content: flex-start;
+    align-items: baseline;
+    background-color: $MainWhite;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 4px 12px;
+}
+
+@mixin Recap() {
+    text-align: justify;
+    padding: 25px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 48em) {
+    .aboutMePhoto {
+        @include AboutMePhoto();
+
+        & .recapDiv {
+            @include RecapView();
+
+            & .recap {
+                @include Recap();
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .aboutMePhoto {
+        @include AboutMePhoto();
+
+        & .recapDiv {
+            @include RecapView();
+
+            & .recap {
+                @include Recap();
+            }
+        }
+    }
+}
